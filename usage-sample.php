@@ -9,7 +9,7 @@ $invoice = new UcsInvoice('INV-20230927');
 $header = new InvoiceHeader();
 
 $header->title = "Ucscode";
-$header->logo = "https://www.cdnlogo.com/logos/t/74/t3.svg";
+$header->logo = "./assets/origin.png";
 $header->date = new DateTimeImmutable("2023-05-14");
 $header->dueDate = new DateTimeImmutable("2023-05-22");
 
@@ -92,6 +92,10 @@ $payment->content = "
             <tr>
                 <th>Bank Name</th>
                 <td>My Bank Name</td>
+            </tr>
+            <tr>
+                <th>Country Code</th>
+                <td>GB</td>
             </tr>
         </tbody>
     </table>
