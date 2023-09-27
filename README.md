@@ -2,6 +2,10 @@
 
 This documentation explains how to use the PHP invoice generator classes to create and customize invoices. The PHP classes provided here allow you to create professional invoices with custom headers, client information, tables, and notes.
 
+## Screenshot
+
+![Alt Text](assets/screenshot.png)
+
 ## Installation
 
 Before you can use the invoice generator, make sure you include the required `invoice-compiler.php` file in your PHP script. Here's an example of how to include it:
