@@ -138,4 +138,4 @@ $invoice->render(true); // Display the invoice in the browser
 $invoiceString = $invoice->render(false); // Get the invoice as a string
 ```
 
-That's it! You have successfully configured and generated an invoice using the PHP invoice generator classes. Customize the invoice to your specific needs by adjusting the header, client information, table data, and notes as required.
+That's it! You have successfully configured and generated an invoice using the Ucscode invoice generator classes. Customize the invoice to your specific needs by adjusting the header, client information, table data, and notes as required.
