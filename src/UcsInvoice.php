@@ -127,4 +127,9 @@ class UcsInvoice
         }
     }
 
+    public static function asset(string $path) {
+        $assetPath = str_replace($_SERVER['DOCUMENT_ROOT'], '', INV_ASSETS) . '/';
+        return $assetPath . $path;
+    }
+
 }

@@ -1,10 +1,10 @@
 <!doctype html>
 <html>
     <head>
-        <link rel="stylesheet" href="../assets/bootstrap/bootstrap.min.css">
-        <link rel="stylesheet" href="../assets/bootstrap/bootstrap-icons.css">
-        <link rel="stylesheet" href="../assets/font-size.min.css">
-        <link rel="stylesheet" href="../assets/style.css">
+        <link rel="stylesheet" href="<?php echo UcsInvoice::asset('bootstrap/bootstrap.min.css'); ?>">
+        <link rel="stylesheet" href="<?php echo UcsInvoice::asset('bootstrap/bootstrap-icons.css'); ?>">
+        <link rel="stylesheet" href="<?php echo UcsInvoice::asset('font-size.min.css'); ?>">
+        <link rel="stylesheet" href="<?php echo UcsInvoice::asset('style.css'); ?>">
     </head>
     <body>
         
