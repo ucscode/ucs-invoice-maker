@@ -78,10 +78,10 @@ class InvoiceTable
      * 2. (array) Containing a list of all previous bills added to the table
      * @param string $class: The classname to style the bill when rendered
      */
-    public function addBill(string $name, string|callable $value, string $classname = '')
+    public function addBill(string $name, string|callable $value, array $info = [])
     {
         $bill['name'] = $name;
-        $bill['class'] = $classname;
+        $bill['info'] = $info;
         if(is_string($value)) {
             $bill['value'] = $value;
         } else {

@@ -1,6 +1,6 @@
 <?php
 
-class UcsInvoice
+class UcsInvoice implements InvoiceCurrencyInterface
 {
     private string $invoiceNumber;
 

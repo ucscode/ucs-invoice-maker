@@ -45,15 +45,17 @@ $table->setHeader(['description', 'hours', 'rate', 'amount']);
 
 // Create rows for each column
 $table->setData([
-    ['Development for August 2023', 40, 7.5, null],
-    ['Development for August 2023', 40, 7.5, null],
-    ['Development for August 2023', 40, 7.5, null],
+    ['Development for May 2023', 40, 7.5, null],
+    ['Development for June 2023', 40, 7.5, null],
+    ['Development for July 2023', 40, 7.5, null],
 ]);
 
+$currency = UcsInvoice::CURRENCIES['USD']['symbol'];
+
 // Dynamically re-format the data for each rows
-$table->formatData(function(array $data) {
+$table->formatData(function(array $data) use($currency) {
     $data[3] = $data[1] * $data[2];
-    $data[2] = '$' . $data[2];
+    $data[2] = $currency . $data[2];
     return $data;
 });
 
@@ -61,13 +63,16 @@ $table->formatData(function(array $data) {
 
 $table->addBill('Sub Total', function(array $allData, array $allBills) {
     return array_sum(array_column($allData, 3));
-});
+}, ['prefix' => $currency]);
 
-$table->addBill('Tax (20%)', '0.00');
+$table->addBill('Tax (0%)', '0.00');
 
 $table->addBill('Total', function(array $allData, array $allBills) {
-    return '$' . array_sum(array_column($allBills, 'value')); 
-}, 'fs-22px');
+    return array_sum(array_column($allBills, 'value')); 
+}, [
+    'prefix' => $currency,
+    'class' => 'fs-22px'
+]);
 
 $invoice->setInvoiceTable($table);
 

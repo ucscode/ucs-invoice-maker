@@ -44,12 +44,16 @@
                                             <?php
                                                 foreach($this->invoiceTable->get('bills') as $bill):
                                                     ?>
-                                            <div class='row row-cols-2 mb-2 <?php echo $bill['class']; ?>'>
+                                            <div class='row row-cols-2 mb-2 <?php echo $bill['info']['class'] ?? null; ?>'>
                                                 <div class='col'>
                                                     <?php echo $bill['name']; ?>
                                                 </div>
                                                 <div class='col text-end'>
-                                                    <?php echo $bill['value']; ?>
+                                                    <?php 
+                                                        echo ($bill['info']['prefix'] ?? '') .
+                                                        $bill['value'] .
+                                                        ($bill['info']['suffix'] ?? ''); 
+                                                    ?>
                                                 </div>
                                             </div>
                                             <?php endforeach; ?>

@@ -11,13 +11,13 @@ foreach($this->invoiceNote as $invoiceNote):
     </h4>
 
     <?php if(!empty(trim($invoiceNote->description))): ?>
-        <p><?php echo $invoiceNote->description; ?>:</p>
+        <p><?php echo $invoiceNote->description; ?></p>
     <?php endif; ?>
 
     <div class='border rounded-2 p-3 <?php echo $invoiceNote->__class; ?>'>
         <?php echo $invoiceNote->content; ?>
     </div>
 
-</div>
+</div> <!-- close mb -->
 
 <?php endforeach; ?>
