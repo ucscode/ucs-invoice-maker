@@ -92,7 +92,7 @@ $table->addBill('Tax (20%)', '0.00');
 
 $table->addBill('Total', function(array $allData, array $allBills) {
     return '$' . array_sum(array_column($allBills, 'value')); 
-}, 'fs-22px');
+}, ['class' => 'fs-22px']);
 
 $invoice->setInvoiceTable($table);
 ```
